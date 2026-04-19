@@ -21,7 +21,7 @@ const Dashboard: React.FC<DashboardProps> = ({ weatherData, onCityChange }) => {
   const { forecastPath, getY } = useMemo(() => {
     const forecast = weatherData?.forecast || [];
     if (forecast.length < 2)
-      return { forecastPath: '', getY: (t: number) => 0 };
+      return { forecastPath: '', getY: (_t: number) => 0 };
 
     const temps = forecast.map((f) => f.temp);
     const minTemp = Math.min(...temps);
