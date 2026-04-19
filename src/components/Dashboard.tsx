@@ -147,11 +147,22 @@ const Dashboard: React.FC<DashboardProps> = ({ weatherData, onCityChange }) => {
       <header className='h-12 flex justify-between items-center mb-6 lg:mb-10 pointer-events-auto shrink-0'>
         <div className='logo flex items-center gap-3 font-bold text-[18px] lg:text-[20px] tracking-tight select-none'>
           <div className='logo-icon w-9 h-9 bg-gradient-to-br from-indigo-500 to-blue-600 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/20 shadow-xl'>
-             <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 8C11.5817 8 8 11.5817 8 16C8 20.4183 11.5817 24 16 24C17.7614 24 19.3804 23.4312 20.697 22.4727C21.4655 21.913 22.5 22.4431 22.5 23.4V23.5C22.5 23.7761 22.7239 24 23 24H23.5C23.7761 24 24 23.7761 24 23.5V16C24 11.5817 20.4183 8 16 8ZM16 21C13.2386 21 11 18.7614 11 16C11 13.2386 13.2386 11 16 11C18.7614 11 21 13.2386 21 16C21 18.7614 18.7614 21 16 21Z" fill="white"/>
-             </svg>
+            <svg
+              width='20'
+              height='20'
+              viewBox='0 0 32 32'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                d='M16 8C11.5817 8 8 11.5817 8 16C8 20.4183 11.5817 24 16 24C17.7614 24 19.3804 23.4312 20.697 22.4727C21.4655 21.913 22.5 22.4431 22.5 23.4V23.5C22.5 23.7761 22.7239 24 23 24H23.5C23.7761 24 24 23.7761 24 23.5V16C24 11.5817 20.4183 8 16 8ZM16 21C13.2386 21 11 18.7614 11 16C11 13.2386 13.2386 11 16 11C18.7614 11 21 13.2386 21 16C21 18.7614 18.7614 21 16 21Z'
+                fill='white'
+              />
+            </svg>
           </div>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60">atmos.</span>
+          <span className='bg-clip-text text-transparent bg-gradient-to-r from-white to-white/60'>
+            atmos.
+          </span>
         </div>
         <div className='flex items-center gap-4'>
           <div className='time-display opacity-30 text-[11px] lg:text-[12px] font-medium hidden sm:block uppercase tracking-widest'>
@@ -316,7 +327,7 @@ const Dashboard: React.FC<DashboardProps> = ({ weatherData, onCityChange }) => {
             strokeWidth='1.5'
           />
         </svg>
-        <div className='forecast-days flex justify-between px-4 lg:px-8 gap-4 overflow-x-auto no-scrollbar scroll-smooth'>
+        <div className='forecast-days flex justify-between px-4 lg:px-8 gap-4 '>
           {(weatherData?.forecast || []).map((f, i) => (
             <div
               key={i}
